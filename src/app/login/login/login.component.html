@@ -1,0 +1,13 @@
+<h1>User Login</h1>
+
+<form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+    <label>
+        User ID:
+        <input type="text" formControlName="userId">
+    </label>
+    <label>
+        Password:
+        <input type="text" formControlName="password">
+    </label>
+    <button type="submit" [disabled]="!LoginForm.valid">Submit</button>
+</form> 

@@ -1,0 +1,20 @@
+<h1>Create new Election</h1>
+<form [formGroup]="createElectionForm" (ngSubmit)="onSubmit">
+    <label>
+        Date:
+        <input type="text" formControlName="date">
+    </label>
+    <label>
+        Type:
+        <input type="text" formControlName="type">
+    </label>
+    <label>
+        City:
+        <input type="text" formControlName="city">
+    </label>
+    <label>
+        State:
+        <input type="text" formControlName="state">
+    </label>
+    <button type="submit" [disabled]="!createElectionForm.valid">Submit</button>
+</form>

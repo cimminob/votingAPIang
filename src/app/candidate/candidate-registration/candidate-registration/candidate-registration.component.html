@@ -1,0 +1,32 @@
+<h1>Candidate Registration</h1>
+<form [formGroup]="candidateForm" (ngSubmit)="onSubmit()">
+    <label>
+        First Name:    </label>
+        <input type="text" formControlName="firstName">
+
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+    </label>
+    <label>
+        Election Type:
+        <input type="text" formControlName="electionType">
+    </label>
+    <label>
+        City:
+        <input type="text" formControlName="city">
+    </label>
+    <label>
+        State:
+        <input type="text" formControlName="state">
+    </label>
+    <label>
+        Email:
+        <input type="text" formControlName="email">
+    </label>
+    <label>
+        Password:
+        <input type="text" formControlName="password">
+    </label>
+    <button type="submit" [disabled]="!candidateForm.valid">Submit</button>
+</form>

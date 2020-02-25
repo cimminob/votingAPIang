@@ -1,0 +1,27 @@
+
+<h1>Voter Registration</h1>
+
+<form [formGroup]="voterForm" (ngSubmit)="onSubmit()">
+    <label>
+        First Name:    
+        <input type="text" formControlName="firstName">
+    </label>
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+    </label>
+    <label>
+        City:
+        <input type="text" formControlName="city">
+    </label>
+    <label>
+        State:
+        <input type="text" formControlName="state">
+    </label>
+    <label>
+        Password:
+        <input type="text" formControlName="password">
+    </label>
+
+    <button type="submit" [disabled]="!voterForm.valid">Submit</button>
+</form>
